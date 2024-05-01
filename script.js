@@ -1,0 +1,164 @@
+const images = [
+  "photo-gallery-4.jpg",
+  "photo-gallery-5.jpg",
+  "photo-gallery-6.jpg",
+  "photo-gallery-7.jpg",
+  "photo-gallery-8.jpg",
+  "photo-gallery-9.jpg",
+  "photo-gallery-10.jpg",
+  "photo-gallery-11.jpg",
+  "photo-gallery-12.jpg",
+  "photo-gallery-13.jpg",
+  "photo-gallery-15.jpg",
+  "photo-gallery-16.jpg",
+  "photo-gallery-17.jpg",
+  "photo-gallery-2.jpg",
+];
+const image = document.querySelector(".image");
+const btnNext = document.querySelector(".btnNext");
+const btnBack = document.querySelector(".btnBack");
+
+i = 0;
+btnNext.addEventListener("click", function () {
+  i++;
+  if (i > images.length - 1) {
+    i = 0;
+  }
+  images.forEach(function (item) {
+    image.src = images[i];
+  });
+});
+
+btnBack.addEventListener("click", function () {
+  i--;
+  if (i < 0) {
+    i = images.length - 1;
+  }
+  images.forEach(function (item) {
+    image.src = images[i];
+  });
+});
+
+const comments = [
+  "comment-1.jpg",
+  "comment-2.jpg",
+  "comment-3.jpg",
+  "comment-4.jpg",
+  "comment-5.jpg",
+  "comment-6.jpg",
+  "comment-7.jpg",
+  "comment-8.jpg",
+  "comment-9.jpg",
+  "comment-10.jpg",
+  "comment-11.jpg",
+  "comment-12.jpg",
+  "comment-13.jpg",
+  "comment-14.jpg",
+  "comment-15.jpg",
+  "comment-16.jpg",
+  "comment-18.jpg",
+  "comment-19.jpg",
+];
+const commentCurrent = document.querySelector(".img-comment-second");
+const commentPrev = document.querySelector(".img-comment-first");
+const commentNext = document.querySelector(".img-comment-third");
+const btnNextComment = document.querySelector(".btnNext-comments");
+const btnBackComment = document.querySelector(".btnBack-comments");
+
+i = 1;
+btnNextComment.addEventListener("click", function () {
+  i++;
+  if (i > comments.length - 1) {
+    i = 0;
+  }
+  comments.forEach(function (item) {
+    commentCurrent.src = comments[i];
+    if (i != comments.length - 1) {
+      commentNext.src = comments[i + 1];
+    } else {
+      commentNext.src = comments[0];
+    }
+
+    if (i != 0) {
+      commentPrev.src = comments[i - 1];
+    } else {
+      commentPrev.src = comments[comments.length - 1];
+    }
+  });
+});
+
+btnBackComment.addEventListener("click", function () {
+  i--;
+  if (i < 0) {
+    i = comments.length - 1;
+  }
+  comments.forEach(function (item) {
+    commentCurrent.src = comments[i];
+    if (i != 0) {
+      commentPrev.src = comments[i - 1];
+    } else {
+      commentPrev.src = comments[comments.length - 1];
+    }
+
+    if (i != comments.length - 1) {
+      commentNext.src = comments[i + 1];
+    } else {
+      commentNext.src = comments[0];
+    }
+  });
+});
+
+function FunctionMobileMenu() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+document.body.addEventListener("click", (e) => {
+  if (e.target.classList.contains("btn-connection")) {
+    Swal.fire({
+      width: 350,
+      title: "Заповніть заявку",
+      showCloseButton: true,
+      showConfirmButton: false,
+      html: `<form
+        class="containerform"
+        action="https://formspree.io/f/mrgdyjrz"
+        method="POST"
+      >
+        <p class=par-form>Залиште Ваші контактні дані та ми зв'яжемося із Вами у робочий час</p>
+        <input type="hidden" class="input-form" name="_language" value="ru"/>
+          <input
+            class="input-form"
+            type="txt"
+            name="name"
+            placeholder="Ваше ім'я..."
+            required=""
+          />
+          <input
+            class="input-form"
+            type="txt"
+            name="phone"
+            placeholder="Ваш номер телефона..."
+            required=""
+          />
+          <textarea
+            class="input-form"
+            name="message"
+            placeholder="Ваше повідомлення..."
+            required=""
+          ></textarea>
+        </label>
+        <button type="submit" class="btn-form">Надіслати</button>
+      </form>`,
+    });
+  }
+  if (window.innerWidth <= 700) {
+    if (e.target.classList.contains("menu-item")) {
+      FunctionMobileMenu();
+    }
+  }
+});
