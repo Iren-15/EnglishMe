@@ -585,9 +585,9 @@ h3 {
 }
 
 .icon-net {
-  width: 50px;
-  height: 50px;
-  margin: 0;
+  width: 40px;
+  height: 40px;
+  margin: 7px 10px 0 0;
 }
 
 .link {
@@ -869,6 +869,7 @@ h3 {
   .menu-item {
     padding-left: 0 0 0 15px;
   }
+
   .info-main {
     display: flex;
     flex-direction: column;
@@ -1206,6 +1207,12 @@ h3 {
 }
 
 @media screen and (max-width: 600px) {
+   .screen600-block {
+    display: block;
+    width: 80%;
+    padding: 40px 0 40px 0;
+  }
+  
   .logo {
     font-size: 22px;
   }
@@ -1219,13 +1226,7 @@ h3 {
     padding-bottom: 0;
   }
 
-  .screen600-block {
-    display: block;
-    width: 80%;
-    padding: 40px 0 40px 0;
-  }
-
-  .info-founder {
+ .info-founder {
     padding: 0;
   }
 
@@ -1250,6 +1251,10 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+  }
+
+  .container-end {
+    order: 1;
   }
 
   .photo-areas-main {
@@ -1315,7 +1320,7 @@ h3 {
   .container-garden-img {
     margin: 0;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   .img-garden {
@@ -1344,6 +1349,10 @@ h3 {
 
   .screen600 {
     display: none;
+  }
+
+  .screen600-desktop {
+    display: block;
   }
 }
 

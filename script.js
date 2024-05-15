@@ -1,18 +1,39 @@
 const images = [
-  "photo-gallery-4.jpg",
+  "photo-gallery-2.jpg",
   "photo-gallery-5.jpg",
   "photo-gallery-6.jpg",
   "photo-gallery-7.jpg",
-  "photo-gallery-8.jpg",
-  "photo-gallery-9.jpg",
   "photo-gallery-10.jpg",
-  "photo-gallery-11.jpg",
   "photo-gallery-12.jpg",
-  "photo-gallery-13.jpg",
   "photo-gallery-15.jpg",
   "photo-gallery-16.jpg",
   "photo-gallery-17.jpg",
-  "photo-gallery-2.jpg",
+  "photo-gallery-19.jpg",
+  "photo-gallery-20.jpg",
+  "photo-gallery-21.jpg",
+  "photo-gallery-22.jpg",
+  "photo-gallery-23.jpg",
+  "photo-gallery-24.jpg",
+  "photo-gallery-26.jpg",
+  "photo-gallery-27.jpg",
+  "photo-gallery-28.jpg",
+  "photo-gallery-29.jpg",
+  "photo-gallery-30.jpg",
+  "photo-gallery-31.jpg",
+  "photo-gallery-32.jpg",
+  "photo-gallery-33.jpg",
+  "photo-gallery-34.jpg",
+  "photo-gallery-35.jpg",
+  "photo-gallery-36.jpg",
+  "photo-gallery-37.jpg",
+  "certificate.jpg",
+  "photo-gallery-43.jpg",
+  "photo-gallery-38.jpg",
+  "photo-gallery-39.jpg",
+  "photo-gallery-40.jpg",
+  "photo-gallery-41.jpg",
+  "photo-gallery-42.jpg",
+  "photo-gallery-18.jpg",
 ];
 const image = document.querySelector(".image");
 const btnNext = document.querySelector(".btnNext");
@@ -126,7 +147,7 @@ document.body.addEventListener("click", (e) => {
       showConfirmButton: false,
       html: `<form
         class="containerform"
-        action="https://formspree.io/f/mrgdyjrz"
+        action="https://formspree.io/f/xrgnjaql"
         method="POST"
       >
         <p class=par-form>Залиште Ваші контактні дані та ми зв'яжемося із Вами у робочий час</p>
