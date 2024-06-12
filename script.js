@@ -33,6 +33,9 @@ const images = [
   "photo-gallery-40.jpg",
   "photo-gallery-41.jpg",
   "photo-gallery-42.jpg",
+  "photo-gallery-44.jpg",
+  "photo-gallery-45.jpg",
+  "photo-gallery-46.jpg",
   "photo-gallery-18.jpg",
 ];
 const image = document.querySelector(".image");
